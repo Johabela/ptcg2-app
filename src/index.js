@@ -17,10 +17,12 @@ root.render(
     <ApiProvider>
       
       <BrowserRouter>
-
+      
         {/* Content shown on ALL routes goes here */}
         <NavSearchBar />
 
+        {/* Content shown on ALL routes goes here */}
+        <NavSearchBar />
 
 
         <Routes>
