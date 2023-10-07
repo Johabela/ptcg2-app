@@ -44,7 +44,6 @@ export default function CardSearchByName() {
 		apiRequest();
 
 	// eslint-disable-next-line react-hooks/exhaustive-deps
-
 	}, []);
 
 	return (
