@@ -9,8 +9,8 @@ function PokemonCard(props) {
       <Card.Img variant="top" src={props.imageUrl} style={{maxHeight: 342, maxWidth: 245, marginTop: 15}} className="mx-auto" />
       <Card.Body>
         <Card.Title>
-			{props.cardTitle}
-		</Card.Title>
+			          {props.cardTitle}
+		        </Card.Title>
         <Card.Text>
           {props.cardDescription}
         </Card.Text>

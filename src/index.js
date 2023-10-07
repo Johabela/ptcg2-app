@@ -21,10 +21,6 @@ root.render(
         {/* Content shown on ALL routes goes here */}
         <NavSearchBar />
 
-        {/* Content shown on ALL routes goes here */}
-        <NavSearchBar />
-
-
         <Routes>
           {/* Homepage route  */}
           <Route path="/" element={<App />}/>
