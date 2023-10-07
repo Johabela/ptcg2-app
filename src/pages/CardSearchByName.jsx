@@ -2,6 +2,9 @@ import { useContext, useEffect, useState } from "react"
 import { ApiContext } from "../contexts/ApiContext";
 import { useParams } from "react-router-dom";
 import PokemonCard from "../components/PokemonCard";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 
 export default function CardSearchByName() {
@@ -44,7 +47,7 @@ export default function CardSearchByName() {
 		apiRequest();
 
 	// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, []);
+	}, [pokemonName]);
 
 	return (
 		<div>
@@ -55,6 +58,23 @@ export default function CardSearchByName() {
 			<div>
 			{/* it will render the name and id from the card that is in the search results  */}
 				<h1>{searchResults[0].name} - {searchResults[0].id}</h1>
+
+				{/* container here with rows and columns */}
+				{/* put card in columns and let them responsively organise themselves  */}		
+				<Container fluid style={{padding: "5%"}}>
+					<Row style={{display: 'flex', flexWrap:'wrap'}}>
+						{searchResults.map(result => {
+							return <Col md>
+							<PokemonCard key={result.id} 
+								cardTitle={result.name} 
+								imageUrl={result.images.small} 
+								cardDescription={result.flavorText} 
+							/>
+							</Col>
+						})}
+					</Row>
+				</Container>
+
 
 				{/* we are showing cards for all data 
 				we are passing data to a individual card  */}
